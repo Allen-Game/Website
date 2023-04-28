@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.main_frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0093F9;
+    height: 50%;
+    width: 50%;
+}
+
+.Describe {
+    font-size: 25px;
+}
