@@ -1,0 +1,15 @@
+@import '/css/color_frame.css';
+
+
+.navbar, .container-fluid {
+    background-color: #232b2b !important;
+}
+
+.navbar, .container-fluid a{
+    color: #fff;
+    transition: all 0.15s;
+}
+
+.navbar .container-fluid a:hover {
+    color: #ffa500;
+}
