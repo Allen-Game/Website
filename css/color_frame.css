@@ -1,15 +1,7 @@
 :root {
-    --primary-color: #4DA8DA;
-    /* 主色调 */
-    --secondary-color: #E6E7E9;
-    /* 次要色调 */
-    --accent-color: #FFB900;
-    /* 强调色调 */
-    --text-color: #FFFFFF;
-    /* 文字颜色 */
-    --background-color: #262626;
-    /* 背景颜色 */
-    --border-color: #4DA8DA;
-    /* 边框颜色 */
-
+    --primary-color: #3465A4;
+    --secondary-color-1: #F2C14E;
+    --secondary-color-2: #FFFFFF;
+    --secondary-color-3: #262626;
+    --background-color: #F5F5F5;
 }
