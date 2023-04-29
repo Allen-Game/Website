@@ -3,17 +3,46 @@
     padding: 0;
 }
 
-
-.main_frame {
+.game_frame {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #0093F9;
-    height: 50%;
-    width: 50%;
+    width: 100%;
+    height: 40%;
+    background-color: #faedcd5f;
+    align-items: center;
+    justify-content: center;
 }
 
-.Describe {
-    font-size: 25px;
+.game_frame .game_frame_title {
+    align-items: center;
+    text-align: center;
+}
+
+
+.game_DBZ {
+    display: block;
+    background-color: #fff;
+    width: 20%;
+    height: 50%;
+    left: 5%;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    float: none;
+    margin: 0;
+    padding: 15px 15px;
+}
+
+.game_name {
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
