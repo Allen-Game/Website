@@ -64,7 +64,7 @@ function img_loading() {
       continue;
     }
     tt.loading = true;
-    tt.src = "/icon/loading.gif";
+    tt.src = "../icon/loading.gif";
     Images(tt.getAttribute("src-data"), function (obj) {
       tt.src = obj.src;
       localStorage.setItem(obj.src, obj.src);
