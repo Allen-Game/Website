@@ -1,4 +1,4 @@
-.banner {
+.banner { /* banner 容器 */
   width: 50%;
   height: 300px;
   position: relative;
@@ -6,31 +6,49 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%);
+  margin-top: 1%;
 }
 
-.banner img {
+
+.banner::before {
+  content: "";
   position: absolute;
-  top: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  padding-top: 54%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+
+
+.banner img { /* 背景图片 */
+  position: absolute;
+  top: 5%;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.5s ease;
 }
 
-.banner-image div {
+.banner-image div { /* 背景图片 文字 */
   position: absolute;
-  bottom: 10px; /* 调整文字的垂直位置 */
-  left: 10px; /* 调整文字的水平位置 */
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
   color: white;
-  font-size: 16px;
+  font-size: 25px;
   font-weight: bold;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   opacity: 0;
   transition: opacity 0.5s ease;
-  /* text-align: center;
-  align-items: center; */
 }
 
-.banner-image img.active, .banner-image div.active {
+.banner-image img.active, /* 选中的图片 */
+.banner-image div.active {
   opacity: 1;
 }

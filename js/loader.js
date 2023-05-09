@@ -5,13 +5,13 @@ Browser.ie = /msie/.test(Browser.userAgent);
 Browser.Moz = /gecko/.test(Browser.userAgent);
 
 //进入页面既执行函数
-$(window).on('load', function() {
+$(window).on('load', function () {
   var imglist = document.querySelectorAll("img");
   for (i = 0; i < imglist.length; i++) {
     let t = imglist[i];
     if (localStorage.getItem(t.src)) {
       t.loading = true;
-      Images(t.getAttribute("src-data"), function(obj) {
+      Images(t.getAttribute("src-data"), function (obj) {
         t.src = localStorage.getItem(obj.src);
       });
     } else {
@@ -27,13 +27,13 @@ function Images(url, callback, error) {
   var img = new Image();
 
   if (Browser.ie) {
-    img.onreadystatechange = function() {
+    img.onreadystatechange = function () {
       if (img.readyState == "complete" || img.readyState == "loaded") {
         callback(img);
       }
     };
   } else {
-    img.onload = function() {
+    img.onload = function () {
       if (img.complete == true) {
         callback(img);
       }
@@ -43,7 +43,7 @@ function Images(url, callback, error) {
   if (error) {
     img.onerror = error;
   } else {
-    img.onerror = function() {
+    img.onerror = function () {
       img.src = "../icon/failed.png";
     };
   }
@@ -65,7 +65,7 @@ function img_loading() {
     }
     tt.loading = true;
     tt.src = "../icon/loading.gif";
-    Images(tt.getAttribute("src-data"), function(obj) {
+    Images(tt.getAttribute("src-data"), function (obj) {
       tt.src = obj.src;
       localStorage.setItem(obj.src, obj.src);
     });
