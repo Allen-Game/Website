@@ -1,16 +1,14 @@
-@import 'color_frame.css';
-
 * {
     outline: none;
 }
 
 .navbar {
-    background-color: #232b2b !important;
+    background-color: #16a085;
 }
 
 .navbar-brand,
 .navbar-nav .nav-link {
-  color: #fff !important;
+  color: #666666 !important;
   transition: all 0.15s;
 }
 
