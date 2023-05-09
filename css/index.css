@@ -20,6 +20,8 @@ body {
     justify-content: center;
     overflow: hidden;
     /* 添加 overflow 属性 */
+    margin-top: 150px;
+    /* 调整合适的间距值 */
 }
 
 .game_frame .game_frame_title {
@@ -51,7 +53,8 @@ body {
     height: 100%;
     position: relative;
     border-radius: 15px;
-    overflow: hidden; /* 添加 overflow 属性 */
+    overflow: hidden;
+    /* 添加 overflow 属性 */
     margin: 15px;
     padding: 15px;
     transition: all 0.15s;

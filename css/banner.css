@@ -1,0 +1,36 @@
+.banner {
+  width: 50%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.banner img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.banner-image div {
+  position: absolute;
+  bottom: 10px; /* 调整文字的垂直位置 */
+  left: 10px; /* 调整文字的水平位置 */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  /* text-align: center;
+  align-items: center; */
+}
+
+.banner-image img.active, .banner-image div.active {
+  opacity: 1;
+}
