@@ -8,7 +8,11 @@
 }
 
 .navbar-nav .nav-link {
-    color: #fff;
+    color: #000000 !important;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
 }
 
 .navbar .container-fluid a:hover {

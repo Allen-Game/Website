@@ -70,9 +70,6 @@ body {
     /* 文字颜色 */
     padding: 10px;
     box-sizing: border-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
 .frame_container .card_wrapper .game_card:hover {
