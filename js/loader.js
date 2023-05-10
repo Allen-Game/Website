@@ -1,73 +1,98 @@
-//判断浏览器
-var Browser = new Object();
-Browser.userAgent = window.navigator.userAgent.toLowerCase();
-Browser.ie = /msie/.test(Browser.userAgent);
-Browser.Moz = /gecko/.test(Browser.userAgent);
+$(window).on('load', function() {
+  var $imglist = $("img");
 
-//进入页面既执行函数
-$(window).on('load', function () {
-  var imglist = document.querySelectorAll("img");
-  for (i = 0; i < imglist.length; i++) {
-    let t = imglist[i];
-    if (localStorage.getItem(t.src)) {
-      t.loading = true;
-      Images(t.getAttribute("src-data"), function (obj) {
-        t.src = localStorage.getItem(obj.src);
+  $imglist.each(function(index, img) {
+    var $img = $(img);
+    if (localStorage.getItem($img.attr("src"))) {
+      $img.data("loading", true);
+      Images($img.attr("src-data"), function(obj) {
+        $img.attr("src", localStorage.getItem(obj.src));
+        checkAllImagesLoaded();
+      }, function() {
+        $img.attr("src", "../icon/failed.png");
+        checkAllImagesLoaded();
       });
     } else {
       img_loading();
     }
+  });
+
+  function checkAllImagesLoaded() {
+    var loadedCount = $imglist.filter(function() {
+      return $(this).data("loading") === true;
+    }).length;
+
+    if (loadedCount === $imglist.length) {
+      console.log("所有图片加载完成");
+    }
   }
 });
 
-
-//判断是否加载完成
 function Images(url, callback, error) {
   var val = url;
   var img = new Image();
 
-  if (Browser.ie) {
-    img.onreadystatechange = function () {
+  if (/msie/.test(navigator.userAgent.toLowerCase())) {
+    img.onreadystatechange = function() {
       if (img.readyState == "complete" || img.readyState == "loaded") {
         callback(img);
       }
     };
   } else {
-    img.onload = function () {
+    img.onload = function() {
       if (img.complete == true) {
         callback(img);
       }
     };
   }
-  //如果因为网络或图片的原因发生异常，则显示该图片
+
   if (error) {
     img.onerror = error;
   } else {
-    img.onerror = function () {
+    img.onerror = function() {
       img.src = "../icon/failed.png";
     };
   }
   img.src = val;
 }
 
-//初始化需要显示的图片，并且指定显示的位置
 function img_loading() {
-  var imglist = document.querySelectorAll("img");
-  for (i = 0; i < imglist.length; i++) {
-    let tt = imglist[i];
-    //防止重复加载
-    if (tt.loading == true) {
-      break;
+  var $imglist = $("img");
+
+  $imglist.each(function(index, img) {
+    var $img = $(img);
+    if ($img.data("loading") === true) {
+      return true; // 跳过已加载的图片
     }
-    //没有该属性代表不加载
-    if (!tt.getAttribute("src-data")) {
-      continue;
+    if (!$img.attr("src-data")) {
+      return true; // 跳过没有 src-data 属性的图片
     }
-    tt.loading = true;
-    tt.src = "../icon/loading.gif";
-    Images(tt.getAttribute("src-data"), function (obj) {
-      tt.src = obj.src;
-      localStorage.setItem(obj.src, obj.src);
+    $img.data("loading", true);
+    $img.attr("src", "../icon/loading.gif");
+
+    var imgObj = new Image(); // 创建新的 Image 对象
+
+    $(imgObj).on("load", function() {
+      $img.attr("src", imgObj.src);
+      localStorage.setItem(imgObj.src, imgObj.src);
+      checkAllImagesLoaded();
     });
+
+    $(imgObj).on("error", function() {
+      $img.attr("src", "../icon/failed.png");
+      checkAllImagesLoaded();
+    });
+
+    imgObj.src = $img.attr("src-data");
+  });
+
+  function checkAllImagesLoaded() {
+    var loadedCount = $imglist.filter(function() {
+      return $(this).data("loading") === true;
+    }).length;
+
+    if (loadedCount === $imglist.length) {
+      console.log("所有图片加载完成");
+    }
   }
 }
