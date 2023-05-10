@@ -1,4 +1,28 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+.game-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  .game-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .game-details {
+    margin-left: 16px;
+  }
+
+  .game-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .game-views,
+  .game-creation {
+    margin-top: 8px;
+    font-size: 14px;
+  }
