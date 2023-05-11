@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/popup.css">
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <title>Game</title>
@@ -37,18 +38,31 @@
 
     <div class="main_frame">
         <div class="container">
-            <div id="app">
-                <div class="game-card"></div>
-                <div class="loading-text">加载中...</div>
+            <div class="card game-card" name="DBZ" id="game-card"
+                onclick="openPopup('Every Second + 1 KI in DBZ', 'Come Join Fight with Moster')">
+                <img class="game-image" src="icon/loading.gif"
+                    src-data="https://tr.rbxcdn.com/e6225053b83a3364292aa14b5adbd0ea/420/420/Image/Png"
+                    alt="Every Second + 1 KI in DBZ" id="game-image">
+                <h5 class="card-title game-name">Every Second + 1 KI in DBZ</h5>
             </div>
         </div>
     </div>
+    <!-- 弹窗 DIV -->
+    <div class="popup" id="popup">
+        <img src="/icon/loading.gif" class="popup-img" id="popup-img">
+        <h2 id="popup-title"></h2>
+        <p id="popup-content"></p>
+        <a class="game-link" href="https://www.roblox.com/games/12524383962/Every-Second-1-Ki-in-DBZ">
+            <button class="game-btn">Open Game Link</button>
+        </a>
+        <button onclick="closePopup()" class="close_btn">close</button>
+    </div>
+    <!-- 背景遮罩 DIV -->
+    <div class="popup-overlay" id="popupOverlay"></div>
 
-
-    <script src="./js/get_game_info.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
-        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="/js/popup.js"></script>
 </body>
 
 </html>
