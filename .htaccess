@@ -1,14 +1,9 @@
 RewriteEngine On
 
 ErrorDocument 404 \404
-ErrorDocument 408 \408
-ErrorDocument 403 \403
-ErrorDocument 503 \503
-
-RedirectMatch 403 /\..*$
 
 
 Options +MultiViews
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^$ home.html [L]
+RewriteRule ^$ home.html [QSA,L]
