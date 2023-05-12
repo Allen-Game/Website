@@ -9,7 +9,7 @@ $(window).on('load', function() {
         $img.attr("src", localStorage.getItem(obj.src));
         checkAllImagesLoaded();
       }, function() {
-        $img.attr("src", "../icon/failed.png");
+        $img.attr("src", "../icon/failed.svg");
         checkAllImagesLoaded();
       });
     } else {
@@ -50,7 +50,7 @@ function Images(url, callback, error) {
     img.onerror = error;
   } else {
     img.onerror = function() {
-      img.src = "../icon/failed.png";
+      img.src = "../icon/failed.svg";
     };
   }
   img.src = val;
@@ -79,7 +79,7 @@ function img_loading() {
     });
 
     $(imgObj).on("error", function() {
-      $img.attr("src", "../icon/failed.png");
+      $img.attr("src", "../icon/failed.svg");
       checkAllImagesLoaded();
     });
 
