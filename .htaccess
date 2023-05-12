@@ -6,4 +6,4 @@ ErrorDocument 404 \404
 Options +MultiViews
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^$ home.html [QSA,L]
+RewriteRule ^$ index.html [QSA,L]
