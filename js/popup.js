@@ -1,7 +1,7 @@
 // 打开弹窗
-function openPopup(gameName, description) {
+function openPopup(description) {
     // 获取要加载的数据（这里仅做示例）
-    const title = gameName;
+    const title = $("#game-name").text();
     const content = description;
 
     // 将数据填充到弹窗的元素中

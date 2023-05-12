@@ -1,41 +1,26 @@
-$(document).ready(function() {
-    const $images = $('.banner-image img');
-    const $texts = $('.banner-image div');
-    let currentIndex = 0;
-  
-    /**
-     * Shows the next image and its corresponding text in a slideshow.
-     */
-    function showNextImage() {
-      // Hide current image and text
-      $images.eq(currentIndex).removeClass('active');
-      $texts.eq(currentIndex).removeClass('active');
-  
-      // Switch to the next image and text
-      currentIndex = (currentIndex + 1) % $images.length;
-  
-      // Show the next image and text
-      $images.eq(currentIndex).addClass('active');
-      $texts.eq(currentIndex).addClass('active');
-    }
-  
-    // Call the showNextImage function every 3 seconds
-    const intervalId = setInterval(showNextImage, 3000);
-  
-    // Check if all images have finished loading
-    const checkAllImagesLoaded = function() {
-      const loadedCount = $images.filter('.active').length;
-      const totalCount = $images.length;
-  
-      if (loadedCount === totalCount) {
-        // All images have finished loading
-        clearInterval(intervalId); // Stop the slideshow interval
-        console.log('All images loaded');
-        // Your code to handle the completion of image loading
-      }
-    };
-  
-    // Attach load event handler to images
-    $images.on('load', checkAllImagesLoaded);
-  });
-  
+console.log("Loading Images");
+
+const $images = $('#banner-image img');
+const $texts = $('#banner-image .banner-text');
+let currentIndex = 0;
+console.log("Loaded Images")
+
+
+/**
+ * 显示下一张图片和对应的文本内容。
+ */
+function showNextImage() {
+  // 隐藏当前的图片和文本
+  $images.eq(currentIndex).removeClass('active');
+  $texts.eq(currentIndex).removeClass('active');
+
+  // 切换到下一张图片和文本
+  currentIndex = (currentIndex + 1) % $images.length;
+
+  // 显示下一张图片和文本
+  $images.eq(currentIndex).addClass('active');
+  $texts.eq(currentIndex).addClass('active');
+}
+
+// 每隔3秒调用 showNextImage 函数
+setInterval(showNextImage, 3000);

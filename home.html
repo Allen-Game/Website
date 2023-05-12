@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/banner.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
     <title>Home</title>
@@ -19,7 +19,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="home">
-                <img src="logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"
+                <img src="logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"
                     fill="CurrentColor">
                 Alan Studio
             </a>
@@ -37,19 +37,19 @@
         </div>
     </nav>
 
-    <div class="container" :class="containerClass" id="app">
+    <div class="container" :class="containerClass">
         <div class="banner">
-            <div class="banner-image">
+            <div class="banner-image" id="banner-image">
                 <img src="icon/loading.gif" loading="lazy" index-data="1" alt="Every Second +1 ki"
                     src-data="https://tr.rbxcdn.com/e6225053b83a3364292aa14b5adbd0ea/420/420/Image/Png">
                 <div class="banner-text">Every Second +1 ki</div>
             </div>
-            <div class="banner-image">
+            <div class="banner-image" id="banner-image">
                 <img src="icon/loading.gif" loading="lazy" index-data="2" alt="Clicker Fighting Simulator"
                     src-data="https://tr.rbxcdn.com/091981dd1705a8a13bc9134c93483635/420/420/Image/Png">
                 <div class="banner-text">Clicker Fighting Simulator</div>
             </div>
-            <div class="banner-image">
+            <div class="banner-image" id="banner-image">
                 <img src="icon/loading.gif" loading="lazy" index-data="3" alt="Naruto But Every Second +1 Chakra"
                     src-data="https://tr.rbxcdn.com/ca116716b6d59182792e5ea76d8eac6f/420/420/Image/Png">
                 <div class="banner-text">Naruto But Every Second +1 Chakra</div>
@@ -60,6 +60,7 @@
 
         <div class="game_frame">
             <h2 class="game_frame_title">Our games</h2>
+            <button class="check_all"><a href="Game">Check All game at game page</a></button>
             <div class="frame_container">
                 <div class="card_wrapper">
                     <div class="game_card" game-name="DBZ">
@@ -69,13 +70,13 @@
                                 class="game_Image" id="game_image" alt="Every Second +1 ki" height="100%" width="100%"
                                 label="DBZ">
                             <div class="game_name" label="DBZ">
-                                Every Second +1 ki
+                                Every Second +1 ki in DBZ
                             </div>
                         </a>
                     </div>
                 </div>
                 <div class="card_wrapper">
-                    <div class="game_card" game-name="DBZ">
+                    <div class="game_card" game-name="Clicker Fighting Simulator">
                         <a href="https://www.roblox.com/games/12985134424/UPD1-Clicker-Fighting-Simulator">
                             <img src="icon/loading.gif" loading="lazy"
                                 src-data="https://tr.rbxcdn.com/091981dd1705a8a13bc9134c93483635/420/420/Image/Png"
@@ -88,7 +89,7 @@
                     </div>
                 </div>
                 <div class="card_wrapper">
-                    <div class="game_card" game-name="DBZ">
+                    <div class="game_card" game-name="Naruto But Every Second +1 Chakra">
                         <a href="https://www.roblox.com/games/12995749346/UPD2-Naruto-But-Every-Second-1-Chakra">
                             <img src="icon/loading.gif" loading="lazy"
                                 src-data="https://tr.rbxcdn.com/ca116716b6d59182792e5ea76d8eac6f/420/420/Image/Png"
@@ -107,29 +108,6 @@
     <script src="js/banner.js"></script>
     <script src="js/loader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script>
-        new Vue({
-            el: '#app',
-            data: {
-                containerClass: '' // 默认情况下不添加任何样式类
-            },
-            mounted() {
-                this.checkScreenWidth();
-                window.addEventListener('resize', this.checkScreenWidth);
-            },
-            methods: {
-                checkScreenWidth() {
-                    if (window.innerWidth < 768) {
-                        this.containerClass = 'small-screen'; // 小屏幕样式类
-                    } else if (window.innerWidth < 1200) {
-                        this.containerClass = 'medium-screen'; // 中等屏幕样式类
-                    } else {
-                        this.containerClass = 'large-screen'; // 大屏幕样式类
-                    }
-                }
-            }
-        });
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
         integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
         crossorigin="anonymous"></script>
