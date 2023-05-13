@@ -1,11 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    transition: all 0.5s;
 }
 
 body {
     background-color: #333333;
-    overflow: hidden;
 }
 
 .game_frame {
@@ -20,7 +20,7 @@ body {
     justify-content: center;
     overflow: hidden;
     /* 添加 overflow 属性 */
-    margin-top: 150px;
+    margin-top: 350px;
     /* 调整合适的间距值 */
 }
 
@@ -36,13 +36,6 @@ body {
     justify-content: center;
     margin-bottom: 15px;
     flex-wrap: wrap;
-    overflow: hidden;
-}
-
-.card_wrapper {
-    flex: 0 0 20%;
-    max-width: 20%;
-    padding: 15px;
     overflow: hidden;
 }
 
@@ -88,4 +81,36 @@ body {
 
 a {
     text-decoration: none;
+}
+
+@media screen and (max-width: 500px) {
+    .game_frame {
+        margin-top: 250px;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .game_frame {
+        margin-top: 200px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .game_frame {
+        margin-top: 200px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .game_frame {
+        margin-top: 200px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .game_frame {
+        margin-top: 150px;
+    }
 }
