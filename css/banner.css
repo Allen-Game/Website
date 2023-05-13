@@ -10,7 +10,7 @@
 }
 
 
-.banner::before {
+.banner-overlay {
   content: "";
   position: absolute;
   top: 50%;
