@@ -4,25 +4,11 @@ mod_rewrite On
 ErrorDocument 404 \404
 
 
-<Directory /js/>
-    Order deny,allow
-    Deny from all
-</Directory>
+<Files "(^js\/)|(^css\/)|(^icon\/)|(^bootstrap-5.3.0-alpha3-dist\/)">
+    Order Allow,Deny
+    Deny from All
+</Files>
 
-<Directory /css/>
-    Order deny,allow
-    Deny from all
-</Directory>
-
-<Directory /icon/>
-    Order deny,allow
-    Deny from all
-</Directory>
-
-<Directory /boostrap-5.3.0-alpha3-dist/>
-    Order deny,allow
-    Deny from all
-</Directory>
 
 Options +MultiViews
 RewriteCond %{REQUEST_FILENAME} !-f
