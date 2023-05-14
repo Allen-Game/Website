@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-flow: row;
+  justify-content: center;
+  flex-grow: 5;
+  flex-wrap: wrap;
+  /* 允许元素换行 */
+  justify-content: center;
+  /* 在容器内左对齐 */
+}
+
+.container .game-card {
+  border: 0.25px solid #ccc;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 calc(20% - 32px); /* 让每个卡片占据容器的 20% 宽度，并考虑到间距 */
+  margin: 16px;
+}
+
+.container .game-image {
+  width: 100%;
+  height: 100%;
+}
+
+.container .game-name {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+  margin-top: 10px;
+}

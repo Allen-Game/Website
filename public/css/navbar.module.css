@@ -1,0 +1,56 @@
+.navbar {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    /* 将内容放置在容器的两侧 */
+    width: 100%;
+    height: auto;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo span {
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.logo img {
+    margin-left: 10px;
+    /* 调整图片和文字之间的间距 */
+}
+
+
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menuItem {
+    margin-left: 20px;
+}
+
+.menuItem a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menuItem a:hover {
+    color: #f00;
+}
