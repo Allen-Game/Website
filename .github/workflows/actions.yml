@@ -30,6 +30,6 @@ jobs:
     - name: 部署 🚀
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        branch: Main
+        branch: main
         folder: out
         clean: true
