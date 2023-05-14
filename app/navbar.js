@@ -20,13 +20,10 @@ const Navbar = () => {
                         <a href="/">Home</a>
                     </li>
                     <li className={styles.menuItem}>
-                        <a href="/about">About</a>
+                        <a href="/about">Game</a>
                     </li>
                     <li className={styles.menuItem}>
-                        <a href="/services">Services</a>
-                    </li>
-                    <li className={styles.menuItem}>
-                        <a href="/contact">Contact</a>
+                        <a href="/services">Social</a>
                     </li>
                 </ul>
             </div>
