@@ -13,8 +13,6 @@ export default function Home() {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="logo.svg" type="image/x-icon" />
-        <Script src="/js/jquery-3.7.0.js" strategy="beforeInteractive" />
-
       </Head>
 
       <Navbar />
@@ -36,6 +34,7 @@ export default function Home() {
       </div> */}
 
       {/* JavaScript脚本 */}
+      <Script src="/js/jquery-3.7.0.js" strategy="beforeInteractive" />
       <Script src="/js/loader.js" strategy="beforeInteractive" />
     </div>
   );
