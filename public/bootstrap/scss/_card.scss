@@ -21,7 +21,7 @@
   --#{$prefix}card-height: #{$card-height};
   --#{$prefix}card-color: #{$card-color};
   --#{$prefix}card-bg: #{$card-bg};
-  --#{$prefix}card-img-overlay-padding: #{$card-img-overlay-padding};
+  --#{$prefix}card-Image-overlay-padding: #{$card-Image-overlay-padding};
   --#{$prefix}card-group-margin: #{$card-group-margin};
   // scss-docs-end card-css-vars
 
@@ -149,29 +149,29 @@
 }
 
 // Card image
-.card-img-overlay {
+.card-Image-overlay {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  padding: var(--#{$prefix}card-img-overlay-padding);
+  padding: var(--#{$prefix}card-Image-overlay-padding);
   @include border-radius(var(--#{$prefix}card-inner-border-radius));
 }
 
-.card-img,
-.card-img-top,
-.card-img-bottom {
+.card-Image,
+.card-Image-top,
+.card-Image-bottom {
   width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
 }
 
-.card-img,
-.card-img-top {
+.card-Image,
+.card-Image-top {
   @include border-top-radius(var(--#{$prefix}card-inner-border-radius));
 }
 
-.card-img,
-.card-img-bottom {
+.card-Image,
+.card-Image-bottom {
   @include border-bottom-radius(var(--#{$prefix}card-inner-border-radius));
 }
 
@@ -207,12 +207,12 @@
         &:not(:last-child) {
           @include border-end-radius(0);
 
-          .card-img-top,
+          .card-Image-top,
           .card-header {
             // stylelint-disable-next-line property-disallowed-list
             border-top-right-radius: 0;
           }
-          .card-img-bottom,
+          .card-Image-bottom,
           .card-footer {
             // stylelint-disable-next-line property-disallowed-list
             border-bottom-right-radius: 0;
@@ -222,12 +222,12 @@
         &:not(:first-child) {
           @include border-start-radius(0);
 
-          .card-img-top,
+          .card-Image-top,
           .card-header {
             // stylelint-disable-next-line property-disallowed-list
             border-top-left-radius: 0;
           }
-          .card-img-bottom,
+          .card-Image-bottom,
           .card-footer {
             // stylelint-disable-next-line property-disallowed-list
             border-bottom-left-radius: 0;

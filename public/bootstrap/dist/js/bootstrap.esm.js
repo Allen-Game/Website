@@ -1107,7 +1107,7 @@ const CLASS_NAME_PREV = 'carousel-item-prev';
 const SELECTOR_ACTIVE = '.active';
 const SELECTOR_ITEM = '.carousel-item';
 const SELECTOR_ACTIVE_ITEM = SELECTOR_ACTIVE + SELECTOR_ITEM;
-const SELECTOR_ITEM_IMG = '.carousel-item img';
+const SELECTOR_ITEM_Image = '.carousel-item Image';
 const SELECTOR_INDICATORS = '.carousel-indicators';
 const SELECTOR_DATA_SLIDE = '[data-bs-slide], [data-bs-slide-to]';
 const SELECTOR_DATA_RIDE = '[data-bs-ride="carousel"]';
@@ -1240,8 +1240,8 @@ class Carousel extends BaseComponent {
     }
   }
   _addTouchEventListeners() {
-    for (const img of SelectorEngine.find(SELECTOR_ITEM_IMG, this._element)) {
-      EventHandler.on(img, EVENT_DRAG_START, event => event.preventDefault());
+    for (const Image of SelectorEngine.find(SELECTOR_ITEM_Image, this._element)) {
+      EventHandler.on(Image, EVENT_DRAG_START, event => event.preventDefault());
     }
     const endCallBack = () => {
       if (this._config.pause !== 'hover') {
@@ -2947,7 +2947,7 @@ const DefaultAllowlist = {
   h5: [],
   h6: [],
   i: [],
-  img: ['src', 'srcset', 'alt', 'title', 'width', 'height'],
+  Image: ['src', 'srcset', 'alt', 'title', 'width', 'height'],
   li: [],
   ol: [],
   p: [],

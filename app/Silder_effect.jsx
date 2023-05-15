@@ -3,7 +3,7 @@ import $ from 'jquery'; // Import the jQuery library
 
 const Silder_effect = () => {
     useEffect(() => {
-        const $images = $('.banner_image img');
+        const $images = $('.banner_image Image');
         const $texts = $('.banner_image div');
         let currentIndex = 0;
         let intervalId;

@@ -1,28 +1,28 @@
 $(window).on('load', function() {
-  var $imglist = $("img");
+  var $Imagelist = $("Image");
 
-  $imglist.each(function(index, img) {
-    var $img = $(img);
-    if (localStorage.getItem($img.attr("src"))) {
-      $img.data("loading", true);
-      Images($img.attr("src-data"), function(obj) {
-        $img.attr("src", localStorage.getItem(obj.src));
+  $Imagelist.each(function(index, Image) {
+    var $Image = $(Image);
+    if (localStorage.getItem($Image.attr("src"))) {
+      $Image.data("loading", true);
+      Images($Image.attr("src-data"), function(obj) {
+        $Image.attr("src", localStorage.getItem(obj.src));
         checkAllImagesLoaded();
       }, function() {
-        $img.attr("src", "../icon/failed.svg");
+        $Image.attr("src", "../icon/failed.svg");
         checkAllImagesLoaded();
       });
     } else {
-      img_loading();
+      Image_loading();
     }
   });
 
   function checkAllImagesLoaded() {
-    var loadedCount = $imglist.filter(function() {
+    var loadedCount = $Imagelist.filter(function() {
       return $(this).data("loading") === true;
     }).length;
 
-    if (loadedCount === $imglist.length) {
+    if (loadedCount === $Imagelist.length) {
       console.log("所有图片加载完成");
     }
   }
@@ -30,68 +30,68 @@ $(window).on('load', function() {
 
 function Images(url, callback, error) {
   var val = url;
-  var img = new Image();
+  var Image = new Image();
 
   if (/msie/.test(navigator.userAgent.toLowerCase())) {
-    img.onreadystatechange = function() {
-      if (img.readyState == "complete" || img.readyState == "loaded") {
-        callback(img);
+    Image.onreadystatechange = function() {
+      if (Image.readyState == "complete" || Image.readyState == "loaded") {
+        callback(Image);
       }
     };
   } else {
-    img.onload = function() {
-      if (img.complete == true) {
-        callback(img);
+    Image.onload = function() {
+      if (Image.complete == true) {
+        callback(Image);
       }
     };
   }
 
   if (error) {
-    img.onerror = error;
+    Image.onerror = error;
   } else {
-    img.onerror = function() {
-      img.src = "../icon/failed.svg";
+    Image.onerror = function() {
+      Image.src = "../icon/failed.svg";
     };
   }
-  img.src = val;
+  Image.src = val;
 }
 
-function img_loading() {
-  var $imglist = $("img");
+function Image_loading() {
+  var $Imagelist = $("Image");
 
-  $imglist.each(function(index, img) {
-    var $img = $(img);
-    if ($img.data("loading") === true) {
+  $Imagelist.each(function(index, Image) {
+    var $Image = $(Image);
+    if ($Image.data("loading") === true) {
       return true; // 跳过已加载的图片
     }
-    if (!$img.attr("src-data")) {
+    if (!$Image.attr("src-data")) {
       return true; // 跳过没有 src-data 属性的图片
     }
-    $img.data("loading", true);
-    $img.attr("src", "../icon/loading.gif");
+    $Image.data("loading", true);
+    $Image.attr("src", "../icon/loading.gif");
 
-    var imgObj = new Image(); // 创建新的 Image 对象
+    var ImageObj = new Image(); // 创建新的 Image 对象
 
-    $(imgObj).on("load", function() {
-      $img.attr("src", imgObj.src);
-      localStorage.setItem(imgObj.src, imgObj.src);
+    $(ImageObj).on("load", function() {
+      $Image.attr("src", ImageObj.src);
+      localStorage.setItem(ImageObj.src, ImageObj.src);
       checkAllImagesLoaded();
     });
 
-    $(imgObj).on("error", function() {
-      $img.attr("src", "../icon/failed.svg");
+    $(ImageObj).on("error", function() {
+      $Image.attr("src", "../icon/failed.svg");
       checkAllImagesLoaded();
     });
 
-    imgObj.src = $img.attr("src-data");
+    ImageObj.src = $Image.attr("src-data");
   });
 
   function checkAllImagesLoaded() {
-    var loadedCount = $imglist.filter(function() {
+    var loadedCount = $Imagelist.filter(function() {
       return $(this).data("loading") === true;
     }).length;
 
-    if (loadedCount === $imglist.length) {
+    if (loadedCount === $Imagelist.length) {
       console.log("所有图片加载完成");
     }
   }

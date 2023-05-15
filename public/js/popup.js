@@ -8,7 +8,7 @@ function openPopup(gameName, description) {
     history.replaceState({}, document.title + `?title={game_name}`, window.location.pathname);
 
     // 加载图片并设置显示
-    $("#popup-img").attr("src", $("#game-image").attr("src-data"));
+    $("#popup-Image").attr("src", $("#game-image").attr("src-data"));
 
     
     $("#popup-title").text(game_name);
