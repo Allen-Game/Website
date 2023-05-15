@@ -1,7 +1,5 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Script from 'next/script';
-import Link from 'next/link';
 import Navbar from './navbar';
 
 export default function Home() {
@@ -9,6 +7,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Home</title>
+        <meta property="og:title" content="Home" key="title" />
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +16,7 @@ export default function Home() {
 
       <Navbar />
 
-      {/* <div className="container">
+      <div className="container">
         <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
         </div>
 
@@ -31,7 +30,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* JavaScript脚本 */}
       <Script src="/js/jquery-3.7.0.js" strategy="beforeInteractive" />
