@@ -33,8 +33,8 @@ export default function Home() {
       </div>
 
       {/* JavaScript脚本 */}
-      <Script src="/js/jquery-3.7.0.js" strategy="beforeInteractive" />
-      <Script src="/js/loader.js" strategy="beforeInteractive" />
+      <Script src="js/jquery-3.7.0.js" strategy="beforeInteractive" />
+      <Script src="js/loader.js" strategy="beforeInteractive" />
     </div>
   );
 }
