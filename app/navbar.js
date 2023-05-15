@@ -5,9 +5,9 @@ import Image from 'next/image';
 const Navbar = () => {
     return (
         <nav className={styles.navbar}>
-            <Link className={styles.logo} href="Home">
+            <Link className={styles.logo} href="/">
                 <Image
-                    src="logo.svg"
+                    src="/icon/logo.svg"
                     alt="logo"
                     width={50}
                     height={50}
@@ -17,13 +17,13 @@ const Navbar = () => {
             <div className={styles.container}>
                 <ul className={styles.menu}>
                     <li className={styles.menuItem}>
-                        <a href="/">Home</a>
+                        <Link className={styles.Item_Link} href="/">Home</Link>
                     </li>
                     <li className={styles.menuItem}>
-                        <a href="/about">Game</a>
+                        <Link className={styles.Item_Link} href="/game">Game</Link>
                     </li>
                     <li className={styles.menuItem}>
-                        <a href="/services">Social</a>
+                        <Link className={styles.Item_Link} href="/services">Social</Link>
                     </li>
                 </ul>
             </div>
