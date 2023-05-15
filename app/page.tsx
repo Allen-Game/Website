@@ -20,7 +20,7 @@ export default function Home() {
         <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
         </div>
 
-        <div className="game_frame">
+        <div className="game">
           <h2 className="game_frame_title">Our games</h2>
           <a href="Game" className="btn btn-primary">More Game</a>
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
