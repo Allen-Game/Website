@@ -22,13 +22,13 @@ jobs:
         run: rm -rf node_modules
         
       - name: Install package
-        run: yarn install
+        run: npm install
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build Next.js app
-        run: yarn build
+        run: npm build
 
       - name: Deploy to hosting platform
         run: |
