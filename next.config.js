@@ -3,8 +3,10 @@ const nextConfig = {
   experimental: {
     appDocumentPreloading: true,
   },
-  // 配置静态 HTML 导出
-  output: "export",
+
+  images: {
+    domains: ['tr.rbxcdn.com'],
+  },
 };
 
 module.exports = nextConfig;

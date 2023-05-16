@@ -19,11 +19,15 @@
     transform: translateX(-50%);
     transition: opacity 0.5s ease;
     opacity: 0;
+    align-items: center;
+    display: block;
 }
 
 .banner_image div {
     /* 背景图片 文字 */
     opacity: 0;
+    align-items: center;
+    display: block;
     position: absolute;
     bottom: 10px;
     left: 0;

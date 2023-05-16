@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import $ from 'jquery'; // Import the jQuery library
-
+import Image from 'next/image';
 const Silder_effect = () => {
     useEffect(() => {
         const $images = $('.banner_image Image');
