@@ -29,7 +29,3 @@ jobs:
 
       - name: Build Next.js app
         run: yarn build
-
-      - name: Deploy to hosting platform
-        run: |
-          # Add your deployment command here
