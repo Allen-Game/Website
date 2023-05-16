@@ -18,7 +18,9 @@ jobs:
         with:
           node-version: 16
 
-        
+      - name: Clear node_modules
+        run: rm -rf node_modules
+
       - name: Install dependencies
         run: npm ci
 
