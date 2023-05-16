@@ -35,7 +35,8 @@ const Index = () => {
                 </div>
             </div>
 
-            {/* JavaScript脚本 */}
+            {/* 异步加载 JavaScript 脚本 */}
+            <Script src="/js/jquery-3.7.0.js" strategy="beforeInteractive" />
         </div>
     );
 }
