@@ -19,13 +19,13 @@ const NextJsCarousel = () => {
         position: "relative",
         left: "50%",
         transform: "translate(-50%)",
-        margintop: "2%",
+        marginTop: "2%",
     }
 
 
     return (
         <div style={banner}>
-            <Carousel showIndicators={false}>
+            <Carousel showIndicators={false} showThumbs={false}>
                 <div>
                     <img src="https://tr.rbxcdn.com/e6225053b83a3364292aa14b5adbd0ea/420/420/Image/Png" alt="Every Second +1 ki in DBZ" style={imgStyle} />
                     <div className="banner-text" style={legendStyle}>Every Second +1 ki in DBZ</div>
