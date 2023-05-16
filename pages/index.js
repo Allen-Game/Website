@@ -14,7 +14,6 @@ const Index = () => {
                 <meta property="og:title" content="Home" key="title" />
                 <meta charSet="UTF-8" />
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-                {/* <link rel='stylesheet' href='/css/Slider.module.css'></link> */}
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="shortcut icon" href="icon/logo.svg" type="image/x-icon" />
             </Head>
@@ -23,21 +22,9 @@ const Index = () => {
 
             <Slider />
 
-            <div className="container">
-                <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel"></div>
-                <div className="game">
-                    <h2 className="game_frame_title">Our games</h2>
-                    <Link href="/game">More Game</Link>
-                    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-                        <div className="col">
-                            <div className="card"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             {/* 异步加载 JavaScript 脚本 */}
-            <Script src="/js/jquery-3.7.0.js" strategy="beforeInteractive" />
+            <Script src="js/jquery-3.7.0.js" strategy="beforeInteractive" />
         </div>
     );
 }
