@@ -1,5 +1,5 @@
-.banner {
-    /* banner 容器 */
+/* .banner {
+    banner 容器
     width: 50%;
     height: 300px;
     position: relative;
@@ -8,34 +8,25 @@
     left: 50%;
     transform: translate(-50%);
     margin-top: 1%;
-}
+} */
 
-
-.banner_image Image {
+.banner img {
     /* 背景图片 */
     position: absolute;
     top: 5%;
     left: 50%;
     transform: translateX(-50%);
-    transition: opacity 0.5s ease;
-    opacity: 0;
-    align-items: center;
-    display: block;
 }
 
-.banner_image div {
+.banner-image div {
     /* 背景图片 文字 */
-    opacity: 0;
-    align-items: center;
-    display: block;
     position: absolute;
     bottom: 10px;
     left: 0;
     right: 0;
     text-align: center;
-    color: #ffff;
+    color: white;
     font-size: 25px;
     font-weight: bold;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    transition: opacity 0.5s ease;
 }

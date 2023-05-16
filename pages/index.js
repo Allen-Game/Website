@@ -14,8 +14,9 @@ const Index = () => {
                 <meta property="og:title" content="Home" key="title" />
                 <meta charSet="UTF-8" />
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+                {/* <link rel='stylesheet' href='/css/Slider.module.css'></link> */}
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <link rel="shortcut icon" href="logo.svg" type="image/x-icon" />
+                <link rel="shortcut icon" href="icon/logo.svg" type="image/x-icon" />
             </Head>
 
             <Navbar />
