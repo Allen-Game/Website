@@ -1,0 +1,11 @@
+
+
+.banner {
+    width: 50%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 2%;
+}
