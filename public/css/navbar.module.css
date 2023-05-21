@@ -1,4 +1,4 @@
-.navbar {
+.navbar[data-theme="dark"] {
     background-color: #333;
     color: #fff;
     width: 100%;
@@ -10,7 +10,19 @@
     padding: 0;
 }
 
-.container {
+.navbar[data-theme="light"] {
+    background-color: #fff;
+    color: #333;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar[data-theme="light"] .container {
     display: flex;
     justify-content: center;
     /* 将内容放置在容器的两侧 */
@@ -25,7 +37,7 @@
     text-decoration: none;
 }
 
-.logo span {
+.navbar[data-theme="light"] .logo span {
     margin-left: 10px;
     white-space: nowrap;
 }
@@ -48,16 +60,11 @@
     margin-left: 20px;
 }
 
-.menuItem a {
-    color: #fff;
+.navbar[data-theme="light"] .menuItem a {
+    color: #000;
     text-decoration: none;
 }
 
 .menuItem a:hover {
     color: #f00;
-}
-
-.logo span {
-    color: #fff !important;
-    text-decoration: none;  
 }

@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Navbar = () => {
     return (
-        <nav className={styles.navbar}>
+        <nav className={styles.navbar} data-theme="light">
             <Link className={styles.logo} href="/">
                 <Image
                     src="icon/logo.svg"

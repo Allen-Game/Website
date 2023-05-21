@@ -8,7 +8,7 @@ import Slider from '../app/Slider';
 
 const Index = () => {
     return (
-        <div className={Style.body}>
+        <div className={Style.body} data-theme="light">
             <Head>
                 <title>Home</title>
                 <meta property="og:title" content="Home" key="title" />
