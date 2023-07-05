@@ -1,70 +1,21 @@
-.game_frame {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+.container {
+    background-color: #6e6e723a;
     align-items: center;
+    align-self: center;
+}
+
+.container .title {
     justify-content: center;
-    overflow: hidden;
-    /* 添加 overflow 属性 */
-    margin-top: 350px;
-    /* 调整合适的间距值 */
-}
-
-.game_frame .game_frame_title {
-    align-items: center;
+    font-size: 25px;
     text-align: center;
-    color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-self: center;
 }
 
-.frame_container {
+.container .content {
     display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
+    flex-direction: row;
     flex-wrap: wrap;
-    overflow: hidden;
-}
-
-.frame_container .card_wrapper .game_card {
-    background: #ffffff;
-    flex: 0 0 auto;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    /* 添加 overflow 属性 */
-    margin: 15px;
-    padding: 15px;
-    transition: all 0.15s;
-    /* 其他样式设置 */
-}
-
-.game_name {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* 添加半透明背景色 */
-    color: #fff;
-    /* 文字颜色 */
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.frame_container .card_wrapper .game_card:hover {
-    background-color: #007bff;
-}
-
-
-.check_all {
-    float: right;
-    border: none;
-    background: transparent;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }

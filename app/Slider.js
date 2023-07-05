@@ -1,47 +1,49 @@
-import React, { Component } from 'react';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
+import React, { useState } from "react";
 
-const NextJsCarousel = () => {
+import Carousel, { CarouselItem, CarouselInfo } from "./Carousel";
 
-    const legendStyle = {
-        fontSize: '25px',
-        display: 'flex',
-    };
+// 轮播图数据
+const info = [
+    {
+        id: 1,
+        title: "Every Second +1 ki in DBZ",
+        image: "https://tr.rbxcdn.com/e6225053b83a3364292aa14b5adbd0ea/720/720/Image/Png",
+        backgroundColor: "transparent",
+    },
+    {
+        id: 2,
+        title: "Clicker Fighting Simulator",
+        image: "https://tr.rbxcdn.com/091981dd1705a8a13bc9134c93483635/720/720/Image/Png",
+        backgroundColor: "transparent",
+    },
+    {
+        id: 3,
+        title: "Naruto But Every Second +1 Chakra",
+        image: "https://tr.rbxcdn.com/ca116716b6d59182792e5ea76d8eac6f/720/720/Image/Png",
+        backgroundColor: "transparent",
+    },
+];
 
-    const imgStyle = {
-        width: '100% !important',
-        height: '100% !important'
-    }
-
-    const banner = {
-        width: "50%",
-        height: "300px",
-        position: "relative",
-        left: "50%",
-        transform: "translate(-50%)",
-        marginTop: "2%",
-    }
-
-
+const App = () => {
     return (
-        <div style={banner}>
-            <Carousel showIndicators={false} showThumbs={false} showStatus={false}>
-                <div style={imgStyle}>
-                    <img src="https://tr.rbxcdn.com/e6225053b83a3364292aa14b5adbd0ea/420/420/Image/Png" alt="Every Second +1 ki in DBZ" />
-                    <div style={legendStyle}>Every Second +1 ki in DBZ</div>
-                </div>
-                <div style={imgStyle}>
-                    <img src="https://tr.rbxcdn.com/091981dd1705a8a13bc9134c93483635/420/420/Image/Png" alt="Clicker Fighting Simulator" />
-                    <div style={legendStyle}>Clicker Fighting Simulator</div>
-                </div>
-                <div style={imgStyle}>
-                    <img src="https://tr.rbxcdn.com/ca116716b6d59182792e5ea76d8eac6f/420/420/Image/Png" alt="Naruto But Every Second +1 Chakra" />
-                    <div style={legendStyle}>Naruto But Every Second +1 Chakra</div>
-                </div>
-            </Carousel>
-        </div >
+        <Carousel>
+            {info?.map((item) => {
+                return (
+                    <CarouselItem
+                        key={item.id}
+                        styles={{ backgroundColor: item.backgroundColor }}
+                    >
+                        <CarouselInfo
+                            title={item.title}
+                            describe={item.describe}
+                            image={item.image}
+                        />
+                    </CarouselItem>
+                );
+            })}
+        </Carousel>
     );
 };
 
-export default NextJsCarousel;
+export default App;
+
