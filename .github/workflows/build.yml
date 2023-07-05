@@ -21,11 +21,14 @@ jobs:
       - name: Clear node_modules
         run: rm -rf node_modules
         
-      - name: Install package
-        run: npm install
-
       - name: Install dependencies
         run: npm ci
 
       - name: Build Next.js app
         run: yarn build
+
+      - name: Deploy to Hosting Provider
+        run: |
+          # Add the deployment command here for your hosting provider
+          # For example:
+          # npx deploy-provider deploy-command
