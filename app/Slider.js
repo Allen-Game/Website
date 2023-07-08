@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Carousel from '../app/Carousel';
+import Carousel from 'Carousel';
 
 // 轮播图数据
 const info = [
