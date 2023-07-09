@@ -16,7 +16,9 @@ const game = () => {
       </Head>
 
       <Navbar />
-      <div>About Page</div>
+    
+      <div>Coming Soon</div>
+      
     </div>
   )
 }
