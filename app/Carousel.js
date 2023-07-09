@@ -108,7 +108,7 @@ const Carousel = ({
                 style={{ transform: `translateX(-${activeIndex * 100}%)` }}
             >
                 {React.Children.map(children, (child) => {
-                    return React.cloneElement(child, { width: "100%", height: "100vh" });
+                    return React.cloneElement(child, { width: "100%", height: "100vh"});
                 })}
             </div>
             <div className={style.loading}>

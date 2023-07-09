@@ -25,6 +25,7 @@ const Index = () => {
 
             <div className={Style.container}>
                 <h2 className={Style.title}>Game</h2>
+                <Link className={Style.moreGame} href="./game">More Game</Link>
                 <div className={Style.content}>
                     <Card style={{ width: '18rem', backgroundColor: '#fff', margin: '15px 15px 15px 15px' }}>
                         <Card.Img variant="top" src="https://tr.rbxcdn.com/e6225053b83a3364292aa14b5adbd0ea/420/420/Image/Png" />

@@ -23,7 +23,7 @@ const Navbar = () => {
                         <Link className={styles.Item_Link} href="/game">Game</Link>
                     </li>
                     <li className={styles.menuItem}>
-                        <Link className={styles.Item_Link} href="/services">Social</Link>
+                        <Link className={styles.Item_Link} href="/social">Social</Link>
                     </li>
                 </ul>
             </div>
