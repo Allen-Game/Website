@@ -19,3 +19,15 @@
     align-content: center;
     align-items: center;
 }
+
+.play {
+    background-color: #0adc8fbe;
+    color: #000;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 20px !important;
+    width: 150px;
+    height: auto;
+    text-align: center;
+}
