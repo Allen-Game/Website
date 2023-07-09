@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Carousel from 'Carousel';
+import Carousel, { CarouselItem, CarouselInfo } from "./Carousel";
 
 // 轮播图数据
 const info = [
@@ -46,4 +46,3 @@ const App = () => {
 };
 
 export default App;
-
