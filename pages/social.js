@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navbar from '../app/navbar';
-import Style from "../public/css/index.module.css";
 
 const Game = () => {
 
@@ -10,6 +9,7 @@ const Game = () => {
         padding: "15px 15px 15px 15px",
         margin: "15px 15px 15px 15px",
         textDecoration: "none",
+        textAlign: "center",
     }
 
     const flex_center = {

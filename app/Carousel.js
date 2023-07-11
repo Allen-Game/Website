@@ -34,7 +34,7 @@ export const CarouselInfo = ({ title = "", describe = "", image = "" }) => {
     return (
         <div className="carousel_info_container">
             <div className="carousel_info_info">
-                <h1 style={{ color: "black;" }}>{title}</h1>
+                <h1 style={{ color: "black; !important" }}>{title}</h1>
                 <span>{describe}</span>
             </div>
             <div className="carousel_info_image_container">
