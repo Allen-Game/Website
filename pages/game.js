@@ -3,7 +3,7 @@ import layout from '../app/layout';
 import Head from 'next/head';
 import Image from 'next/image';
 import Style from '../public/css/game.module.css';
-
+import game_Card from '../app/game_card';
 
 const game = () => {
   return (
@@ -52,8 +52,7 @@ const game = () => {
         </div>
       </div>
 
-
-
+      <game_Card></game_Card>
     </div>
   )
 }
