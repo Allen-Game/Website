@@ -20,4 +20,6 @@
     margin: 25px 25px;
 }
 
-.game_name {}
+.game_name {
+    white-space: nowrap;
+}
