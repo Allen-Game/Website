@@ -1,9 +1,8 @@
 import React from 'react';
-import Navbar from '../app/navbar';
-import layout from '../app/layout';
 import Head from 'next/head';
 import Link from 'next/link';
-
+import NavBar from '../app/navbar';
+import layout from '../app/layout';
 
 const NotFoundPage = () => {
 
@@ -36,7 +35,8 @@ const NotFoundPage = () => {
                 <link rel="shortcut icon" href="icon/logo.svg" type="image/x-icon" />
             </Head>
 
-            <Navbar />
+            <NavBar />
+
             <h1 style={Page_Not_Found}>404 Page Not Found </h1>
             <Link href="/" style={Back_Home}>Back to Home</Link>
 

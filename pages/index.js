@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import Script from 'next/script';
-import Navbar from '../app/navbar';
 import Style from "../public/css/index.module.css";
-import layout from '../app/layout';
 import Link from 'next/link';
 import Carousel from '../app/Slider';
 import { Card } from 'react-bootstrap';
+import NavBar from '../app/navbar';
+import layout from '../app/layout';
 
 const Index = () => {
     return (
@@ -19,7 +19,7 @@ const Index = () => {
                 <link rel="shortcut icon" href="icon/logo.svg" type="image/x-icon" />
             </Head>
 
-            <Navbar />
+            <NavBar />
 
             <Carousel />
 
