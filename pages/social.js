@@ -10,6 +10,7 @@ const Game = () => {
         padding: "15px 15px 15px 15px",
         margin: "15px 15px 15px 15px",
         textDecoration: "none",
+        textAlign: "center",
     }
 
     const flex_center = {
