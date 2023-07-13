@@ -1,10 +1,40 @@
-/*
+import { useEffect, useState } from 'react';
+import Style from '../public/css/game.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
 
-    TODO:
-        当用户刷新页面时读取游戏json文件
+const Game = () => {
+    const [games, setGames] = useState([]);
 
-        点击卡片时，传入数据（标题,图片,游戏链接,等)
+    useEffect(() => {
+        const fetchGames = async () => {
+            try {
+                const response = await fetch('/game.json');
+                const data = await response.json();
+                setGames(data);
+            } catch (error) {
+                console.error('Failed to fetch game data:', error);
+            }
+        };
 
-        点击play按钮时跳转到游戏链接
+        fetchGames();
+    }, []);
 
-*/
+    return (
+        <div className={Style.container}>
+            <div className={Style.content}>
+                {games.map((game) => (
+                    <div key={game.id} className={Style.card}>
+                        <Image src={game.thum} width={420} height={420} alt={game.name} />
+                        <div className={Style.cardTitle}>{game.name}</div>
+                        <Link className={Style.playButton} href={game.game_url}>
+                            Play
+                        </Link>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};
+
+export default Game;

@@ -1,34 +1,32 @@
-import styles from '../public/css/navbar.module.css';
-import Link from 'next/link';
-import Image from 'next/image';
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Navbar = () => {
+const NavBar = () => {
     return (
-        <nav className={styles.navbar} data-theme="light">
-            <Link className={styles.logo} href="/">
-                <Image
-                    src="icon/logo.svg"
-                    alt="logo"
-                    width={50}
-                    height={50}
-                />
-                <span>Alan Studio</span>
-            </Link>
-            <div className={styles.container}>
-                <ul className={styles.menu}>
-                    <li className={styles.menuItem}>
-                        <Link className={styles.Item_Link} href="/">Home</Link>
-                    </li>
-                    <li className={styles.menuItem}>
-                        <Link className={styles.Item_Link} href="/game">Game</Link>
-                    </li>
-                    <li className={styles.menuItem}>
-                        <Link className={styles.Item_Link} href="/social">Social</Link>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <div>
+            <Navbar bg="body-tertiary">
+                <Container>
+                    <Navbar.Brand href="/">
+                        <img
+                            alt=""
+                            src="/icon/logo.svg"
+                            width="50"
+                            height="50"
+                            className="d-inline-block"
+                        />
+                        Alan Studio
+                    </Navbar.Brand>
+                    <Nav className="mx-auto justify-content-center">
+                        <Nav.Link href="/" className="text-center">Home</Nav.Link>
+                        <Nav.Link href="/game" className="text-center">Game</Nav.Link>
+                        <Nav.Link href="/social" className="text-center">Social</Nav.Link>
+                    </Nav>
+                </Container>
+            </Navbar>
+        </div>
     );
-};
+}
 
-export default Navbar;
+export default NavBar;

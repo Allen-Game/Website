@@ -32,6 +32,8 @@
     text-align: center;
 }
 
+
+
 .moreGame {
     text-align: center;
     background-color: azure;
@@ -42,4 +44,12 @@
     border-radius: 10px;
     right: 50px;
     position: relative;
+}
+
+.play:hover {
+    background-color: #0adc8f63;
+}
+
+.moreGame:hover {
+    background-color: rgba(240, 255, 255, 0.527);
 }

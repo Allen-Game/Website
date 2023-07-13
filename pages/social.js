@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import Navbar from '../app/navbar';
-import Style from "../public/css/index.module.css";
+import NavBar from '../app/navbar';
+import layout from '../app/layout';
 
 const Game = () => {
 
@@ -37,7 +37,7 @@ const Game = () => {
                 <link rel="shortcut icon" href="logo.svg" type="image/x-icon" />
             </Head>
 
-            <Navbar />
+            <NavBar />
 
             <div style={flex_center}>
                 <Link href="https://www.roblox.com/groups/10391051/Alan-International-Studio#!/about" style={Text_style}>

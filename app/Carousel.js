@@ -10,8 +10,8 @@ import style from "../public/css/carousel.module.css";
  */
 export const CarouselItem = ({
     children = React.createElement("div"),
-    width = "50%",
-    height = "50%",
+    width = "100%",
+    height = "100%",
     styles = {},
 }) => {
     return (
@@ -34,7 +34,7 @@ export const CarouselInfo = ({ title = "", describe = "", image = "" }) => {
     return (
         <div className="carousel_info_container">
             <div className="carousel_info_info">
-                <h1 style={{ color: "black;" }}>{title}</h1>
+                <h1 style={{ color: "black;", fontSize: "25px", textAlign: "center" }}>{title}</h1>
                 <span>{describe}</span>
             </div>
             <div className="carousel_info_image_container">
