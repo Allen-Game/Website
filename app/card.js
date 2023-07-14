@@ -3,7 +3,7 @@ import Style from '../public/css/game.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const game.Game = () => {
+const gameGame = () => {
     const [games, setGames] = useState([]);
 
     useEffect(() => {
