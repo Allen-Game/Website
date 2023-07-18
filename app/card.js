@@ -24,8 +24,8 @@ const Game = () => {
         <div className={Style.container}>
             <div className={Style.content}>
                 {games.map((game) => (
-                    <div key={game.id} className={Style.card}>
-                        <Image src={game.thum} width={420} height={420} alt={game.game_name} />
+                    <div key={game.id} className={Style.card} type={game.game_type}>
+                        <Image src={game.game_thum} width={420} height={420} alt={game.game_name} />
                         <div className={Style.cardTitle}>{game.game_name}</div>
                         <Link className={Style.playButton} href={game.game_url}>
                             Play

@@ -3,18 +3,21 @@
         "id": 1,
         "game_name": "Every Second +1 ki in DBZ",
         "game_url": "https://www.roblox.com/games/12524383962/UPD9-Every-Second-1-Ki-in-DBZ",
-        "game_thum": "https://tr.rbxcdn.com/e6225053b83a3364292aa14b5adbd0ea/720/720/Image/Png"
+        "game_thum": "https://tr.rbxcdn.com/e6225053b83a3364292aa14b5adbd0ea/720/720/Image/Png",
+        "game_type": "simulator"
     },
     {
         "id": 2,
-        "game_name": "Click Fighting Simulator",
+        "game_name": "Clicker Fighting Simulator",
         "game_url": "https://www.roblox.com/games/12985134424/UPD-Clicker-Fighting-Simulator",
-        "game_thum": "https://tr.rbxcdn.com/091981dd1705a8a13bc9134c93483635/720/720/Image/Png"
+        "game_thum": "https://tr.rbxcdn.com/091981dd1705a8a13bc9134c93483635/720/720/Image/Png",
+        "game_type": "simulator"
     },
     {
         "id": 3,
         "game_name": "Naruto But Every Second +1 Chakra",
         "game_url": "https://www.roblox.com/games/12995749346/UPD2-2-Naruto-But-Every-Second-1-Chakra",
-        "game_thum": "https://tr.rbxcdn.com/ca116716b6d59182792e5ea76d8eac6f/720/720/Image/Png"
+        "game_thum": "https://tr.rbxcdn.com/ca116716b6d59182792e5ea76d8eac6f/720/720/Image/Png",
+        "game_type": "simulator"
     }
 ]
