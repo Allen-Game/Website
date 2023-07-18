@@ -30,6 +30,8 @@ const NotFoundPage = () => {
                 <title>404 Page Not Found</title>
                 <meta property="og:title" content="404 Page Not Found" key="title" />
                 <meta charSet="UTF-8" />
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8229591117115313"
+                    crossorigin="anonymous"></script>
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="shortcut icon" href="icon/logo.svg" type="image/x-icon" />

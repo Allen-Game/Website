@@ -13,6 +13,8 @@ const Index = () => {
             <Head>
                 <title>Home</title>
                 <meta property="og:title" content="Home" key="title" />
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8229591117115313"
+                    crossorigin="anonymous"></script>
                 <meta charSet="UTF-8" />
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
