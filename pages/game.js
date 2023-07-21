@@ -4,6 +4,7 @@ import layout from '../app/layout';
 import Head from 'next/head';
 import Image from 'next/image';
 import Style from '../public/css/game.module.css';
+import Script from 'next/script';
 
 const game = () => {
   return (
@@ -17,10 +18,13 @@ const game = () => {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="icon/logo.svg" type="image/x-icon" />
+        <link href='/css/dropdown.css' rel='stylesheet' />
+        <script href='/js/jquery-3.6.0.min.js'></script>
       </Head>
       <NavBar />
 
       <Game />
+      <script href='/js/gameTypeFilter.js'></script>
     </div>
   );
 };
