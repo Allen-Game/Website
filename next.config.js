@@ -1,12 +1,4 @@
-const nextConfig = {
-  // 选择合适的属性进行配置
-  experimental: {
-    appDocumentPreloading: true,
-  },
+/** @type {import('next').NextConfig} */
+const nextConfig = {}
 
-  images: {
-    domains: ['tr.rbxcdn.com'],
-  },
-};
-
-module.exports = nextConfig;
+module.exports = nextConfig
