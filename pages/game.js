@@ -24,7 +24,6 @@ const game = () => {
       <NavBar />
 
       <Game />
-      <script href='/js/gameTypeFilter.js'></script>
     </div>
   );
 };
