@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import style from "../public/css/carousel.module.css";
 
 /**
@@ -34,11 +35,17 @@ export const CarouselInfo = ({ title = "", describe = "", image = "" }) => {
     return (
         <div className="carousel_info_container">
             <div className="carousel_info_info">
-                <h1 style={{ color: "black;", fontSize: "25px", textAlign: "center" }}>{title}</h1>
+                <h1 style={{ color: "black", fontSize: "25px", textAlign: "center" }}>{title}</h1>
                 <span>{describe}</span>
             </div>
             <div className="carousel_info_image_container">
-                <img src={image} alt="game" className="carousel_info_image" />
+                <Image
+                    className="carousel_info_image"
+                    src={image}
+                    height={720}
+                    width={720}
+                >
+                </Image>
             </div>
         </div>
     );
@@ -108,7 +115,7 @@ const Carousel = ({
                 style={{ transform: `translateX(-${activeIndex * 100}%)` }}
             >
                 {React.Children.map(children, (child) => {
-                    return React.cloneElement(child, { width: "100%", height: "100vh"});
+                    return React.cloneElement(child, { width: "100%", height: "100vh" });
                 })}
             </div>
             <div className={style.loading}>

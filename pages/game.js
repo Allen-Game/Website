@@ -19,7 +19,7 @@ const game = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="icon/logo.svg" type="image/x-icon" />
         <link href='/css/dropdown.css' rel='stylesheet' />
-        <script href='/js/jquery-3.6.0.min.js'></script>
+        <script href='https://code.jquery.com/jquery-3.7.1.min.js'></script>
       </Head>
       <NavBar />
 
