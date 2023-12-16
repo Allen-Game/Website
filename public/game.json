@@ -19,5 +19,19 @@
         "game_url": "https://www.roblox.com/games/12995749346/UPD2-2-Naruto-But-Every-Second-1-Chakra",
         "game_thum": "https://tr.rbxcdn.com/ca116716b6d59182792e5ea76d8eac6f/720/720/Image/Png",
         "game_type": "Simulator"
+    },
+    {
+        "id": 4,
+        "game_name": "Toilet Fighting Simulator",
+        "game_url": "https://www.roblox.com/games/15107361788/UPD-Toilet-Fighting-Simulator",
+        "game_thum": "https://tr.rbxcdn.com/1c3cb3fdb4e5598ab902c29152bfb47c/720/720/Image/Png",
+        "game_type": "Simulator"
+    },
+    {
+        "id": 5,
+        "game_name": "Fart A Friend",
+        "game_url": "https://www.roblox.com/games/14689517484/UPD-Fart-A-Friend",
+        "game_thum": "https://tr.rbxcdn.com/dfb3c5dfc683a2479ae93876ba161f26/720/720/Image/Png",
+        "game_type": "Simulator"
     }
 ]
