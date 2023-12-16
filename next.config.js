@@ -1,6 +1,7 @@
+/** @type {import('next').NextConfig} */
 module.exports = {
+  output: 'export',
   experimental: {
-    output: 'export',
     appDocumentPreloading: true,
   },
   images: {
