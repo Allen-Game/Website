@@ -18,11 +18,11 @@ jobs:
         with:
           node-version: 18
 
+      - name: clean cache
+        run: npm cache clean --force
+
       - name: Clear node_modules
         run: rm -rf node_modules
-
-      - name: delete package-lock.json file
-        run: rm -f package-lock.json
         
       - name: install
         run: npm install
